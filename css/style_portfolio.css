@@ -1,0 +1,541 @@
+/*Para llamar las fuentes de texto	*/
+
+/*font-family: 'Muli', sans-serif;
+font-family: 'Mukta', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;*/
+
+* {
+	margin:0;	
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+
+
+}
+
+:root {
+	--light:#fffabb;
+	--pureWhite:#fff;
+	--dark: #1a1a1a;
+	--grey: #899495;
+	--orange: #fc5130;
+	--SectionGrey: #f2f2f2;
+	--SectionWhite: #fff;
+}
+
+
+#nav_menu {
+	background: var(--light);
+	color: var(--black);
+}
+
+.header {
+	min-height: 100vh;
+	background: url(../phone.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed; 
+	background-position: center;
+
+	/*En una sola línea*/
+	/*background: url(phone.png)center/cover fixed no-repeat;*/
+	
+	display: flex;
+	flex-direction: column;
+
+	/*Agregar efecto overlay/oscurecer en la foto*/
+	/*filter:brightness(60%);*/
+	/*opacity: 0.8;*/
+	/*También sirve lo siguiente:*/
+	/*background: linear-gradient(
+                     rgba(20,20,20, .5), 
+                     rgba(20,20,20, .5)),
+                     url(phone.png);*/
+}
+
+.banner {
+
+	/*Uso "flex 1 0 auto" para que se pueda expandir según lo que yo quiera, pero no se encoge*/
+	/*flex-grow flex-shrink flex-basis*/
+
+	flex:1 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/*Si quiero mi texto principal al final del espacio del flexbox, entonces uso:*/
+	/*align-items: flex-end;*/
+	
+	color: var(--light);
+	text-align: center;
+	font-weight: 700;
+	
+}
+
+.banner_title {
+
+	/*Lo habitual es que el Default Font Size del navegador sea 16px | 5rem = 5 x 16px */
+	font-size: 4rem;
+	letter-spacing: 0.2rem;
+	margin-bottom: 0.3rem;
+	font-weight: 700;
+	/*Para crear el efecto de border en las letras*/
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.banner_title_sec {
+
+	/*Lo habitual es que el Default Font Size del navegador sea 16px | 5rem = 5 x 16px */
+
+	font-size: 5vw;
+	letter-spacing: 0.2rem;
+	margin-bottom: 0.3rem;
+	font-weight: 700;	
+	color:var(--dark);
+	/*Para crear el efecto de border en las letras*/
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.banner_jobs {
+	font-size: 4vw;
+	color:var(--dark);
+	padding: 2rem;
+	letter-spacing: 0.2rem;
+	margin-bottom: 0.3rem;
+	font-weight: 700;
+	/*Para crear el efecto de border en las letras*/
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+/*Inicia "About me" Section*/
+
+.about_me {
+	padding: 1rem 0;
+	background: var(--SectionWhite);
+	/*background: linear-gradient(rgba(100,200,20, .5), rgba(20,20,20, .5));*/
+}
+
+.about_me_center {
+	margin: 0 auto;
+	max-width: 90vw;
+}
+
+.about_me_foto {
+	display: block;
+	width: 100%;
+	position: relative;
+
+}
+
+.about_me_image {
+	position: relative;
+	margin: 3rem 0;
+}
+
+.about_me_info {
+	margin: 3rem auto;
+	display: flex;
+	align-items: flex-start;
+}
+
+.about_me_info_titulo {
+	font-size: 3rem;
+	font-weight: 700;
+	/*text-transform: uppercase;*/
+	text-transform: capitalize;
+	letter-spacing: 0.2rem;
+	background: url(../img/negro_entrelazado.png) no-repeat;
+	text-align: center;
+	color: var(--light);
+
+}
+
+.about_me_info_misdatos {
+	color: var(--grey);
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.7rem;
+	margin: 1rem 0;
+	text-align: justify;
+}
+
+.about_enlace1, .about_enlace2{
+
+	/*Eliminamos el underline del enlace*/
+	text-decoration: none;
+	margin: 0.3rem;
+	display: inline-block;
+	padding: 0.3rem 1.5rem;
+	font-size: 1.4rem;
+	letter-spacing: 0.2rem;
+	text-transform: capitalize;	
+	border: 2px dotted var(--light);
+	border-radius: 7px;
+	transition: all 0.8s ease-in-out;
+	margin-right: 1rem;
+	flex:1 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*Le damos color al botón*/
+
+.btn_negro {
+	background: var(--dark);
+	color: var(--pureWhite);
+
+}
+
+/*Cuando se haga hover, quiero que se intercambien los colores/valores 	*/
+
+.btn_negro:hover {
+	background: var(--pureWhite);
+	color:var(--dark);
+	border: 2px solid var(--dark);
+
+}
+
+.btn_blanco {
+	color: var(--dark);
+	border: 2px solid var(--grey);
+}
+
+.btn_blanco:hover {
+	background: var(--dark);
+	color: var(--pureWhite);
+	border: 2px dotted var(--light);
+}
+
+/*Quiero que a partir de 768px, se muestren dos columnas*/
+
+@media screen and (min-width: 768px){
+	.about_me_center {
+		display: flex;
+		justify-content: space-between;
+		
+}
+
+	.about_me_foto {
+	display: block;
+	width: 100%;
+	position: relative;
+
+}
+	.about_me_image, .about_me_info {
+
+		/*Quiero que los contenedores de la foto y de mis datos no crezcan, tampoco se encojan: ;*/
+		/*flex-grow flex-shrink flex-basis*/
+		flex: 0 0 calc(50% - 1rem);
+
+	}
+
+}
+
+/*Termina "About me" Section*/
+
+
+/*Section Title*/
+.section_title {
+	text-align: center;
+}
+
+.section_title_name {
+	font-size: 3rem;
+	font-weight: 700;
+	/*text-transform: uppercase;*/
+	text-transform: capitalize;
+	letter-spacing: 0.2rem;
+	background: url(../img/negro_entrelazado.png) no-repeat;
+	text-align: center;
+	color: var(--light);
+
+}
+/*Termina Section Title*/
+
+/*Inicia "Servicios" Section */
+.services {
+	padding: 1rem 0;
+	background: var(--SectionWhite);
+}
+
+.services_center {
+	max-width: 90vw;
+	margin: 2rem auto;
+}
+
+.services_single_service {
+	margin: 2rem auto;
+	text-align: center;
+	transition: all 0.8s ease-in-out;
+	padding: 2rem 0;
+
+}
+
+.services_single_service:hover {
+	background:  var(--pureWhite);
+	/*opacity: 0.1;*/
+	box-shadow: 0 15px 20px rgba(0,0,0, 0.5);
+
+
+}
+
+.services_single_service_icon {
+	font-size: 4rem;
+}
+
+.services_single_service_title {
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	letter-spacing: 0.2rem;
+	font-weight: 700;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.services_single_service_text {
+	width: 80%;
+	margin: 0 auto;
+	text-align: left;letter-spacing: 0.2rem;
+	text-align: justify;
+
+}
+
+/*Para ubicar los elementos lado a lado*/
+
+@media screen and (min-width: 768px){
+	.services_center {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.services_single_service {
+		flex: 0 0 calc(50% - 1rem);
+	}
+
+}
+
+@media screen and (min-width: 986px){
+.services_single_service {
+	flex:0 0 calc(33.33% - 0.25rem);
+}
+
+/*Termina "Servicios" Section */
+
+/*Clients Section*/
+.single_client {
+	padding: 40px 0;
+}
+
+.clientes_title{
+	font-size: 3rem;
+	font-weight: 700;
+	/*text-transform: uppercase;*/
+	text-transform: capitalize;
+	letter-spacing: 0.2rem;
+	background: url(../img/negro_entrelazado.png) no-repeat;
+	text-align: center;
+	color: var(--light);
+}
+
+/*Termina Clients Section*/
+
+ul {
+  list-style-type: none;
+}
+
+/*Contacto*/
+#contacto {
+	margin-top: 3rem;
+}
+
+.phone {
+	margin-left: 1rem;	
+}
+
+.email {
+	margin-left: 1rem;	
+}
+
+/*Footer social icons*/
+.final_footer {
+	background: var(--dark);
+	padding: 1.2rem 0;
+}
+
+.footer_icons {
+	display: flex;
+	justify-content: space-around;
+
+}
+
+.footer_single_icon {
+	font-size: 2rem;	
+	color: var(--light);
+	transition: all 1.2s lineal;
+}
+
+.footer_single_icon:hover {
+	font-size: 2.4rem;	
+	color: var(--pureWhite);
+	
+}
+
+
+
+
+
+
+
+/*
+section > h2 {
+	font-family: 'Muli', sans-serif;
+}
+
+.des1 {
+	width: 200px;
+	height: 300px;
+	background-color: orange;
+}
+
+.des2 {
+	width: 200px;
+	height: 150px;
+	background-color: violet;
+}
+
+.container {
+	
+	width: 80%;
+	padding: 30px;
+	margin: 0 auto;
+	background-color: #dfdfdf;
+	
+}
+
+#nav_menu {
+	padding: 20px;
+ 	font-size: 1.2em;
+  	border: none;
+  	color: #fff;
+	background-color: transparent;
+	cursor: pointer;
+	margin: 20px;
+}
+
+.btn_menu {
+  background-color: #fff;
+  color:#2980b9;
+  padding: 3px;
+  border: 3px solid transparent;
+  transition-property: background-color, color, border;
+  transition-duration: 0.4s;
+}
+
+.btn_menu:hover {
+  background-color: transparent;
+  color: #fff;
+  border: 3px solid #fff;
+}
+
+.center {
+	text-align: center;
+}
+
+*/
+
+/*a {
+	removemos el underline de los links del nav bar
+	text-decoration: none;
+}*/
+
+/*.my_side_bar {
+	position: relative;
+	color: white;
+	float: right;
+	width: 150px;
+	height: 300px;
+	margin: 10px;
+	background-color: #4b4b4b;
+	text-align: center;
+
+}*/
+
+/*.servicios {
+	padding: 10px;
+	border: 2px dashed green;
+	display: inline-block;
+	width: 20%;
+}
+
+.extras {
+	padding: 10px;
+	border: 2px dashed darkblue;
+	display: inline-block;
+	width: 20%;
+}*/
+
+/*ol, ul{
+	transition: border 1s ease-out;
+	}
+
+
+.list_hover:hover {
+	display: block;
+	width: 30%;
+	border: 1px dotted black;
+}
+
+p::before { 
+    content: "¡Te lo vas a perder?";
+    background-color: grey;
+    margin:5px;
+    padding: 2px;
+    border-radius: 5px; 
+    color: white;
+    font-weight: bold;
+}
+
+#user_in::after {
+	content: " Google, Radio, conocidos, etc";
+    background-color: green;
+    margin:5px;
+    padding: 2px;
+    border-radius: 5px; 
+    color: white;
+    font-weight: bold;
+}
+*/
+/*#user_feedback::after {
+	content: " ¡Las críticas también son bienvenidas!";
+	font-size: 14px;
+    background-color: rgb(245, 85, 73);
+    margin:5px;
+    padding: 2px;
+    border-radius: 5px; 
+    color: white;
+    font-weight: bold;
+}
+.web_oficial {
+	border: 2px dotted green;
+	padding: 15px;
+	
+}*/
+
+/*.logo {
+	box-sizing: border-box;
+	max-width: 100%;
+  	height: auto;
+  }*/
+
+/*.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
