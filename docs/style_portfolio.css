@@ -34,7 +34,7 @@ body {
 
 .header {
 	min-height: 100vh;
-	background: url(../phone.png);
+	background: url(phone.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed; 
@@ -147,7 +147,7 @@ body {
 	/*text-transform: uppercase;*/
 	text-transform: capitalize;
 	letter-spacing: 0.2rem;
-	background: url(../img/negro_entrelazado.png) no-repeat;
+	background: url(img/negro_entrelazado.png) no-repeat;
 	text-align: center;
 	color: var(--light);
 
@@ -248,7 +248,7 @@ body {
 	/*text-transform: uppercase;*/
 	text-transform: capitalize;
 	letter-spacing: 0.2rem;
-	background: url(../img/negro_entrelazado.png) no-repeat;
+	background: url(img/negro_entrelazado.png) no-repeat;
 	text-align: center;
 	color: var(--light);
 
@@ -336,7 +336,7 @@ body {
 	/*text-transform: uppercase;*/
 	text-transform: capitalize;
 	letter-spacing: 0.2rem;
-	background: url(../img/negro_entrelazado.png) no-repeat;
+	background: url(img/negro_entrelazado.png) no-repeat;
 	text-align: center;
 	color: var(--light);
 }
